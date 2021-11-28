@@ -9,8 +9,14 @@ class Report extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'phone_id',
+        'comment',
+        'informer'
+    ];
+
     public function phones()
     {
-        return $this->belongsTo(Phone::class);
+        return $this->belongsTo(Phone::class, 'phone_id', 'id');
     }
 }

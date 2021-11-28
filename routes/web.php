@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PhoneController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-Route::get('/', [PhoneController::class, 'index'])->name('phone.index');
-Route::get('/phone/{id}', [PhoneController::class, 'show'])->name('phone.show');
+Route::get('/', [PhoneController::class, 'index'])->name('index');
+Route::get('/telefon/{id}', [PhoneController::class, 'show'])->name('phone.show');
+Route::post('/cercar-telefon', [PhoneController::class, 'search'])->name('phone.search');
+Route::post('/denuncia-nou-telefon', [PhoneController::class, 'store'])->name('phone.store');
+
+Route::post('/denuncia', [ReportController::class, 'store'])->name('report.store');
