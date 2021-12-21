@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="container mx-auto space-y-16">
-    <section class="flex flex-col p-8 space-y-4 rounded-md bg-coolGray-50">
+    <section class="flex flex-col p-8 space-y-4 rounded-md bg-coolGray-800">
         <div class="w-full mx-auto space-y-4 text-center mb-8">
             <h1 class="text-4xl font-bold leading-tight md:text-5xl">Què és Qui dimonis truca?</h1>
         </div>
-        <div class="text-coolGray-800">
+        <div class="text-coolGray-100">
             <p class="mb-3">Qui dimonis truca és un servei gratuït en què no cal registrar-se destinat a fer cerques de telèfon inverses, és a dir, no cercar el telèfon d'una empresa en particular, sinó cercar a qui realment pertany un número de telèfon en concret, descobrir quines són les seves veritables intencions i com aturar les trucades si cal.</p>
             <p class="mb-3">Som el millor directori d'empreses de telemàrqueting i spam a Espanya i Llatinoamèrica, amb més d'1 milió números d'spam telefònic a més de 30 països identificats.</p>
             <p class="mb-3">Més de 600.000 usuaris ja gaudeixen la nostra app de bloqueig de trucades amb què podràs protegir el teu telèfon de forma automàtica dels telèfons spam que detectem. Descarrega-te-la gratuïtament i protegeix el teu mòbil des d'avui mateix!</p>
@@ -17,12 +17,12 @@
     </section>
     <section>
         <span class="block mb-2 text-xs font-medium tracking-widest uppercase lg:text-center text-violet-600">També s'han queixat</span>
-        <h2 class="text-5xl font-bold lg:text-center text-coolGray-900">Darrers números denunciats</h2>
+        <h2 class="text-5xl font-bold lg:text-center text-coolGray-100">Darrers números denunciats</h2>
         <div class="grid gap-6 my-16 lg:grid-cols-3">
 
             @foreach ($lastReported as $phone)
                     <a href="{{ route('phone.show', $phone->id) }}">
-                        <div class="flex flex-col p-8 space-y-4 rounded-md bg-coolGray-50">
+                        <div class="flex flex-col p-8 space-y-4 rounded-md bg-coolGray-800">
                             <div class="flex items-center justify-center flex-shrink-0 w-2/3 h-12 text-xl font-bold rounded-full bg-violet-600 text-coolGray-50">
                                 <i class="fas fa-phone-volume"></i>&nbsp;{{ $phone->number }}
                             </div>
@@ -45,12 +45,12 @@
     </section>
     <section>
         <span class="block mb-2 text-xs font-medium tracking-widest uppercase lg:text-center text-red-600">Vés bloquejant-los</span>
-        <h2 class="text-5xl font-bold lg:text-center text-coolGray-900">Top spam</h2>
+        <h2 class="text-5xl font-bold lg:text-center text-coolGray-100">Top spam</h2>
         <div class="grid gap-6 my-16 lg:grid-cols-3">
 
             @foreach ($topReported as $phone)
                     <a href="{{ route('phone.show', $phone->id) }}">
-                        <div class="flex flex-col p-8 space-y-4 rounded-md bg-coolGray-50">
+                        <div class="flex flex-col p-8 space-y-4 rounded-md bg-coolGray-800">
                             <div class="flex items-center justify-center flex-shrink-0 w-2/3 h-12 text-xl font-bold rounded-full bg-red-600 text-coolGray-50">
                                 <i class="fas fa-exclamation-triangle"></i>&nbsp;{{ $phone->number }}
                             </div>

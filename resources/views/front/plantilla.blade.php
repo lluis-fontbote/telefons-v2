@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/llums.css') }}" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
-<body>
-    <div class="min-h-screen bg-coolGray-100 text-coolGray-800">
+<body class="bg-coolGray-800 text-coolGray-100">
+    <div class="min-h-screen bg-coolGray-800 text-coolGray-100">
         <div class="p-6 space-y-8">
-            <header class="container flex items-center justify-between h-16 px-4 mx-auto rounded bg-coolGray-50">
+            <header class="container flex items-center justify-between h-16 px-4 mx-auto rounded bg-coolGray-800 text-coolGray-100">
                 <a href="{{ route('index') }}" aria-label="Homepage" style="display: flex;">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-6 h-6 text-violet-600">
                         <path d="M27.912 7.289l-10.324-5.961c-0.455-0.268-1.002-0.425-1.588-0.425s-1.133 0.158-1.604 0.433l0.015-0.008-10.324 5.961c-0.955 0.561-1.586 1.582-1.588 2.75v11.922c0.002 1.168 0.635 2.189 1.574 2.742l0.016 0.008 10.322 5.961c0.455 0.267 1.004 0.425 1.59 0.425 0.584 0 1.131-0.158 1.602-0.433l-0.014 0.008 10.322-5.961c0.955-0.561 1.586-1.582 1.588-2.75v-11.922c-0.002-1.168-0.633-2.189-1.573-2.742zM27.383 21.961c0 0.389-0.211 0.73-0.526 0.914l-0.004 0.002-10.324 5.961c-0.152 0.088-0.334 0.142-0.53 0.142s-0.377-0.053-0.535-0.145l0.005 0.002-10.324-5.961c-0.319-0.186-0.529-0.527-0.529-0.916v-11.922c0-0.389 0.211-0.73 0.526-0.914l0.004-0.002 10.324-5.961c0.152-0.090 0.334-0.143 0.53-0.143s0.377 0.053 0.535 0.144l-0.006-0.002 10.324 5.961c0.319 0.185 0.529 0.527 0.529 0.916z"></path>
@@ -19,6 +20,37 @@
                     </svg>
                     &nbsp;<p>Qui dimonis truca?</p>
                 </a>
+                <div class="div-llumetes" style="max-width: 50%">
+                    <div class="light">
+                        <ul class="line">
+                            <li class="red"></li>
+                            <li class="yellow"></li>
+                            <li class="blue"></li>
+                            <li class="pink"></li>
+                            <li class="red"></li>
+                            <li class="green"></li>
+                            <li class="blue"></li>
+                            <li class="yellow"></li>
+                            <li class="red"></li>
+                            <li class="pink"></li>
+                            <li class="blue"></li>
+                            <li class="yellow"></li>
+                            <li class="red"></li>
+                            <li class="green"></li>
+                            <li class="blue"></li>
+                            <li class="yellow"></li>
+                            <li class="red"></li>
+                            <li class="pink"></li>
+                            <li class="green"></li>
+                            <li class="blue"></li>
+                            <li class="pink"></li>
+                            <li class="red"></li>
+                            <li class="green"></li>
+                            <li class="blue"></li>
+                        </ul>
+                    </div>
+                    <p class="bon-nadal">Bon Nadal! </p>
+                </div>
                 <div class="items-center hidden space-x-8 lg:flex">
                     <form action="{{ route('phone.search') }}" method="POST" style='display:flex; flex-direction:row'>
                         @csrf
@@ -43,7 +75,7 @@
                 @yield('content')
             </main>
             <footer>
-                <div class="container flex justify-between p-6 mx-auto lg:p-8 bg-coolGray-50">
+                <div class="container flex justify-between p-6 mx-auto lg:p-8 bg-coolGray-800 text-coolGray-100">
                     <a href="{{ route('index') }}" class="font-bold">Qui dimonis truca?</a>
                     <div class="flex space-x-2">
                         <a aria-label="Email" href="#" class="flex items-center justify-center text-coolGray-600">
@@ -67,5 +99,7 @@
             </footer>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* flocs de neu*/
+.flake {
+    position: absolute;
+    z-index: 1;
+    animation: fall 5s linear forwards;
+    color: white;
+    font-size: .75rem;
+  }
+  
+  @keyframes fall {
+    0% {top: 0px}
+    100% {top: calc(300% - .75rem)}
+  }
+
+  /* @import '../sass/llums.scss'; */
